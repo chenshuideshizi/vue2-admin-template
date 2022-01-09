@@ -47,3 +47,14 @@
 #### (3) 按钮权限控制
 
 #### (4) axios拦截器
+
+
+当 vue-router 为  history 模式时，需要添加配置
+```js
+{
+    // history模式下的url会请求到服务器端，但是服务器端并没有这一个资源文件，就会返回404，所以需要配置这一项
+      historyApiFallback: {
+          index: '/index.html'
+      },
+}
+```
