@@ -21,15 +21,14 @@ axios.interceptors.response.use(
 
 // 封装请求
 export const request =  (options = {}) => {
+  debugger
   const {url, data = {}, params = {}, method = 'POST'} = options
   const p = new Promise((resolve, reject) => {
     axios({
       method,
       url,
       params,
-      data,
-      responseType: opt.dataType || 'json',
-      headers: opt.headers || {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}
+      data
     })
       .then(response => {
         if (response.data.code === 0 || response.data.code === '200') {

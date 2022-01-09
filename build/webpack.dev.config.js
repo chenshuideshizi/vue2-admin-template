@@ -29,6 +29,7 @@ module.exports = merge(baseConfig, {
       historyApiFallback: {
           index: '/index.html'
       },
+      // onBeforeSetupMiddleware: require('../mock/mock-server')
   },
   plugins: [
 

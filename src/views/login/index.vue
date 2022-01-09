@@ -37,7 +37,8 @@ export default {
     },
     methods: {
         async handleLogin() {
-            const [, err] = await login(this.loginForm)
+            const [res, err] = await login(this.loginForm)
+            debugger
 
             if (err) {
                 this.msg = err.msg
